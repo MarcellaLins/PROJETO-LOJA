@@ -5,14 +5,14 @@ public class Cliente {
     private String nome;
     private String email;
     private String telefone;
-    private String estado;
+    private Estado estado;
     private TipoCliente tipoCliente;
 
     public Cliente(
             String nome,
             String email,
             String telefone,
-            String estado,
+            Estado estado,
             TipoCliente tipoCliente
     ) {
         this.nome = nome;
@@ -46,11 +46,11 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public String getEstado() {
+    public Estado getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
 
