@@ -1,19 +1,19 @@
 package src.model;
 
 import src.desconto.Desconto;
-import src.pagamento.Pagamento;
+import src.pagamento.PagamentoStrategy;
 
 public class Pedido {
 
     private Cliente cliente;
-    private Pagamento pagamento;
+    private PagamentoStrategy pagamento;
     private Frete frete;
     private double valorProdutos;
     private Desconto desconto;
     private boolean embrulhoPresente;
 
     public Pedido(Cliente cliente,
-                  Pagamento pagamento,
+                  PagamentoStrategy pagamento,
                   Frete frete,
                   double valorProdutos,
                   Desconto desconto,
@@ -31,7 +31,7 @@ public class Pedido {
         return cliente;
     }
 
-    public Pagamento getPagamento() {
+    public PagamentoStrategy getPagamento() {
         return pagamento;
     }
 

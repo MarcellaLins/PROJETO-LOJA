@@ -1,4 +1,4 @@
-package src.pagamento;
+package src.pagamento_02;
 
 public abstract class PagamentoDecorator implements Pagamento {
 

@@ -6,9 +6,11 @@ import src.model.Estado;
 import src.model.Frete;
 import src.model.Pedido;
 import src.model.TipoCliente;
-import src.pagamento.Pagamento;
-import src.pagamento.PagamentoBase;
-import src.pagamento.PixDecorator;
+import src.pagamento.PagamentoPix;
+import src.pagamento_02.Pagamento;
+import src.pagamento_02.PagamentoBase;
+import src.pagamento_02.Pix;
+import src.pagamento.PagamentoStrategy;
 import src.pedido.ProcessadorPedido;
 
 public class Main {
@@ -26,8 +28,7 @@ public class Main {
         Desconto desconto = new SemDesconto();
         desconto = new CupomFreteGratis(desconto);
 
-        Pagamento pagamento = new PixDecorator(
-                new PagamentoBase(),
+        PagamentoStrategy pagamento = new PagamentoPix(
                 500.0
         );
 
