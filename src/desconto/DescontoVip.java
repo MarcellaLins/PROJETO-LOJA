@@ -13,6 +13,6 @@ public class DescontoVip
     public double calcular(Pedido pedido) {
 
         return super.calcular(pedido)
-                + pedido.getValorProdutos() * 0.10;
+                + pedido.getValorProdutos() * 0.15;
     }
 }
